@@ -1,5 +1,6 @@
 <configuration>
 <!-- Site specific YARN configuration properties -->
+<property><name>yarn.resourcemanager.webapp.address</name><value>master:8188</value></property>
 <property><name>yarn.log.server.url</name><value>http://master:19888/jobhistory/logs</value></property>
 <property><name>yarn.resourcemanager.fs.state-store.uri</name><value>/rmstate</value></property>
 <property><name>yarn.timeline-service.generic-application-history.enabled</name><value>true</value></property>
