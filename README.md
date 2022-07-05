@@ -1,4 +1,5 @@
-hadoop集群节点环境准备：
+# hadoop集群节点环境准备：
+```
 1、网速测试工具iperf3,需关闭防火墙
   服务端：iperf3 -s -i 1 -p 1314
   客户端：iperf3 -c host -i 1 -t 60 -p 1314
@@ -78,6 +79,6 @@ restrict 127.0.0.1
 restrict ::1
 8.3 client端定时任务 crontab -e 或 /var/spool/cron/root
 0 0 * * * ntpdate -u master
-
+```
 
 
