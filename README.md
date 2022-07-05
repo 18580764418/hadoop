@@ -4,6 +4,9 @@
   服务端：iperf3 -s -i 1 -p 1314
   客户端：iperf3 -c host -i 1 -t 60 -p 1314
 ## 2、配置hostname
+```
+hostnamectl set-hostname slave
+```
 ## 3、配置/etc/hosts
 ```
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
