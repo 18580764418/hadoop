@@ -30,8 +30,8 @@ systemctl status firewalld.service (验证)
 ```
 ```
 #6、设置SWAP
-#vim /etc/sysctl.conf
-#vm.swappiness = 10
+vim /etc/sysctl.conf
+vm.swappiness = 10
 #验证：
 #[root@ip-172-31-6-148~]# sysctl -p
 #…
@@ -40,6 +40,13 @@ systemctl status firewalld.service (验证)
 #kernel.shmmax= 68719476736
 #kernel.shmall= 4294967296
 #vm.swappiness= 10
+# 设置打开最大文件数
+ulimit -n 655350
+vim /etc/security/limits.conf
+root soft nofile 655350
+root hard nofile 655350
+* soft nofile 655350
+* hard nofile 655350
 ```
 ## 7、关闭透明大页面
 ```
